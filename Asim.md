@@ -18,7 +18,10 @@ os.chdir(working_directory)  # 🔄 Change the current working directory to the 
 
 
 ```python
-df = pd.read_excel('Input.xlsx', parse_dates=['Date'])  # 📥 Read the Excel file and 📅 parse the 'Date' column as datetime
+df = pd.read_excel('Input.xlsx', parse_dates=['Date'], usecols=['Date','Vehicle Number','Location'])  
+# 📄 Read the 'Input.xlsx' file into a DataFrame (df)
+# 📅 Parse the 'Date' column as datetime objects
+# 🗂️ Only read the 'Date', 'Vehicle Number', and 'Location' columns to save memory and time
 ```
 
 ## Extract Day name
